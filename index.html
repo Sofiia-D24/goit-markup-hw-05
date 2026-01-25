@@ -54,7 +54,9 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-button">Order Service</button>
+          <button type="button" class="hero-button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -640,6 +642,132 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="#icon-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+
+        <form class="modal-form">
+          <div class="form-field">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+                required
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="user-phone">Phone</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="tel"
+                id="user-phone"
+                name="user-phone"
+                required
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="email"
+                id="user-email"
+                name="user-email"
+                required
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field form-field-comment">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea
+              class="form-textarea"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="form-field-checkbox">
+            <input
+              class="checkbox-input"
+              type="checkbox"
+              id="user-privacy"
+              name="user-privacy"
+              value="true"
+              required
+            />
+            <label class="checkbox-label" for="user-privacy">
+              <span class="custom-checkbox">
+                <svg width="10" height="8">
+                  <use href="#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="privacy-link" href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="submit-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
     <svg style="display: none"></svg>
+    <svg style="display: none">
+      <symbol id="icon-close" viewBox="0 0 8 8">
+        <path
+          d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z"
+        />
+      </symbol>
+
+      <symbol id="icon-person" viewBox="0 0 18 24">
+        <path
+          d="M9 12C11.7614 12 14 9.76142 14 7C14 4.23858 11.7614 2 9 2C6.23858 2 4 4.23858 4 7C4 9.76142 6.23858 12 9 12ZM9 14C5.99625 14 0 15.5063 0 18.5V20C0 20.5523 0.447715 21 1 21H17C17.5523 21 18 20.5523 18 20V18.5C18 15.5063 12.0037 14 9 14Z"
+        />
+      </symbol>
+
+      <symbol id="icon-phone" viewBox="0 0 18 24">
+        <path
+          d="M13.996 15.1299L12.636 14.9999C12.062 14.9449 11.5 15.1699 11.126 15.5999L10.048 16.7849C8.08397 15.8899 6.42397 14.2299 5.52897 12.2659L6.71397 11.1879C7.14397 10.8129 7.36897 10.2509 7.31397 9.67695L7.18397 8.31695C7.09397 7.39295 6.31897 6.67695 5.38897 6.67695H4.03097C3.00797 6.67695 2.15297 7.53195 2.20897 8.55495C2.56297 15.1789 7.82697 20.443 14.451 20.797C15.474 20.853 16.329 19.998 16.329 18.975V17.617C16.335 16.693 15.619 15.9179 14.695 15.8279L13.996 15.1299Z"
+        />
+      </symbol>
+
+      <symbol id="icon-email" viewBox="0 0 18 24">
+        <path
+          d="M15 6H3C2.175 6 1.5075 6.675 1.5075 7.5L1.5 16.5C1.5 17.325 2.175 18 3 18H15C15.825 18 16.5 17.325 16.5 16.5V7.5C16.5 6.675 15.825 6 15 6ZM15 9L9 12.75L3 9V7.5L9 11.25L15 7.5V9Z"
+        />
+      </symbol>
+
+      <symbol id="icon-check" viewBox="0 0 10 8">
+        <path
+          d="M8.44558 0.255056C8.61838 0.089653 8.84834 -0.00178848 9.08693 2.65108e-05C9.32551 0.0018415 9.55407 0.0967713 9.72436 0.264784C9.89466 0.432797 9.99337 0.660752 9.99968 0.900549C10.006 1.14034 9.91939 1.37323 9.75816 1.55005L4.86357 7.70436C4.7794 7.79551 4.67782 7.86865 4.5649 7.91942C4.45198 7.97018 4.33003 7.99754 4.20636 7.99984C4.08268 8.00214 3.95981 7.97935 3.8451 7.93282C3.73038 7.88629 3.62618 7.81698 3.53872 7.72903L0.292827 4.46564C0.202435 4.38096 0.129933 4.27884 0.0796475 4.16537C0.0293621 4.05191 0.00232279 3.92942 0.000143182 3.80522C-0.00203643 3.68102 0.0206883 3.55752 0.0669613 3.44184C0.113234 3.32616 0.18268 3.22078 0.269948 3.13323C0.357216 3.04568 0.460897 2.97775 0.575465 2.93283C0.690033 2.88791 0.812734 2.86693 0.936267 2.87086C1.0598 2.87479 1.18163 2.90357 1.29449 2.95567C1.40734 3.00777 1.50892 3.08208 1.59315 3.17492L4.16189 5.73753L8.42227 0.28219C8.42994 0.272694 8.43813 0.263635 8.4468 0.255056H8.44558Z"
+        />
+      </symbol>
+    </svg>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
