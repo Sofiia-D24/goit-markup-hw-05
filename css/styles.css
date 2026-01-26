@@ -829,3 +829,6 @@ a {
 .subscribe-icon {
   margin-left: 16px;
 }
+.checkbox-span {
+  display: inline-flex;
+}
